@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://SOA/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://SOA/">
+
+<xs:element name="download" type="tns:download" />
+
+<xs:element name="downloadResponse" type="tns:downloadResponse" />
+
+<xs:element name="getTextDoc" type="tns:getTextDoc" />
+
+<xs:element name="getTextDocResponse" type="tns:getTextDocResponse" />
+
+<xs:element name="getTextHTML" type="tns:getTextHTML" />
+
+<xs:element name="getTextHTMLResponse" type="tns:getTextHTMLResponse" />
+
+<xs:element name="getTextPDF" type="tns:getTextPDF" />
+
+<xs:element name="getTextPDFResponse" type="tns:getTextPDFResponse" />
+
+<xs:element name="getTextTXT" type="tns:getTextTXT" />
+
+<xs:element name="getTextTXTResponse" type="tns:getTextTXTResponse" />
+
+<xs:element name="upload" type="tns:upload" />
+
+<xs:element name="uploadResponse" type="tns:uploadResponse" />
+
+<xs:complexType name="getTextDoc">
+<xs:sequence>
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="file" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextDocResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextHTML">
+<xs:sequence>
+<xs:element name="url" type="xs:string" minOccurs="0" />
+<xs:element name="match" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextHTMLResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextTXT">
+<xs:sequence>
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="file" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextTXTResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="upload">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uploadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getTextPDF">
+<xs:sequence>
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="file" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTextPDFResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="download">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="downloadResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
